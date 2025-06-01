@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的主页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-pattern {
+            background-image: linear-gradient(to right bottom, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8)), url('https://placehold.co/1920x1080/60a5fa/e0f2fe?text=背景图案');
+            background-size: cover;
+            background-position: center;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <nav class="bg-white shadow-md fixed w-full z-10 top-0">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">我的网站</a>
+            <div class="space-x-4">
+                <a href="#home" class="text-gray-600 hover:text-blue-500 transition duration-300">首页</a>
+                <a href="#features" class="text-gray-600 hover:text-blue-500 transition duration-300">特色</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-500 transition duration-300">项目</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-500 transition duration-300">联系我</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-pattern text-white pt-32 pb-20 md:pt-48 md:pb-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">欢迎来到我的个人主页</h1>
+            <p class="text-lg md:text-2xl mb-8 text-gray-200">在这里发现我的项目、想法和创造力。</p>
+            <a href="#projects" class="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300 text-lg">
+                查看我的项目
+            </a>
+        </div>
+    </header>
+
+    <section id="features" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-700">核心特色</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg feature-card transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-700">创新项目</h3>
+                    <p class="text-gray-600">探索一系列富有创造力和实用性的项目，展示前沿技术和解决方案。</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg feature-card transition duration-300">
+                    <div class="text-green-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-700">技术博客</h3>
+                    <p class="text-gray-600">阅读我的技术文章和教程，分享知识与见解，共同学习进步。</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg feature-card transition duration-300">
+                    <div class="text-purple-500 mb-4">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-700">开源贡献</h3>
+                    <p class="text-gray-600">积极参与开源社区，贡献代码，推动技术共享与发展。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-700">我的项目</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden feature-card transition duration-300">
+                    <img src="https://placehold.co/600x400/3b82f6/ffffff?text=项目图片+1" alt="项目图片 1" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/333333?text=图片加载失败';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-700">项目名称 A</h3>
+                        <p class="text-gray-600 mb-4">这是一个关于项目A的简短描述。突出其主要功能和技术栈。</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-700 font-medium transition duration-300">了解更多 &rarr;</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden feature-card transition duration-300">
+                    <img src="https://placehold.co/600x400/10b981/ffffff?text=项目图片+2" alt="项目图片 2" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/333333?text=图片加载失败';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-700">项目名称 B</h3>
+                        <p class="text-gray-600 mb-4">项目B的简介。说明其解决的问题和创新点。</p>
+                        <a href="#" class="text-green-500 hover:text-green-700 font-medium transition duration-300">了解更多 &rarr;</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden feature-card transition duration-300">
+                    <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=项目图片+3" alt="项目图片 3" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/333333?text=图片加载失败';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-700">项目名称 C</h3>
+                        <p class="text-gray-600 mb-4">项目C的亮点。可以提及所使用的技术或取得的成就。</p>
+                        <a href="#" class="text-purple-500 hover:text-purple-700 font-medium transition duration-300">了解更多 &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-700">联系我</h2>
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                <p class="text-gray-600 mb-6 text-center">如果您有任何问题或合作意向，请随时通过以下方式联系我。</p>
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="您的姓名">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">邮箱</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="您的邮箱地址">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">消息</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="请输入您的留言"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                            发送消息
+                        </button>
+                    </div>
+                </form>
+                 <p class="text-center text-gray-500 mt-8">
+                    或者通过 <a href="mailto:admin@loal.edu.deal" class="text-blue-500 hover:underline">admin@loal.edu.deal</a> 直接联系我。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="currentYear"></span> 我的网站. 保留所有权利.</p>
+            <p class="mt-2">由 <a href="https://tailwindcss.com/" class="text-blue-400 hover:text-blue-300">Tailwind CSS</a> 和爱心强力驱动 ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+        // 设置当前年份
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                // 确保目标元素存在
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // 如果是 #home 或其他特殊锚点，可以滚动到页面顶部
+                    if (targetId === '#home') {
+                         window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                    console.warn('Target element not found for selector:', targetId);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
